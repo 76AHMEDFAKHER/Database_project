@@ -149,3 +149,7 @@ references restaurant_schema.menuBACKUP(mlbup_name)
 insert into restaurant_schema.ordersBACKUP
  select *from restaurant_schema.orders
  where order_id in (select order_id from restaurant_schema.orders);
+
+select Customer_id  ,Customer_name ,order_id ,order_price,num_of_order , order_date  ,c_id ,m_name 
+from restaurant_schema.Customers c join restaurant_schema.orders o
+on c.Customer_id =o.c_id 
