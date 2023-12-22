@@ -90,3 +90,13 @@ stock_name varchar(20) primary key,
 number_of_stock int,
 
  );
+
+ insert into restaurant_schema.stock
+values
+('Tomatoes',20),
+('potatoes',15),
+('onions',40),
+('lettuce',10),
+('garlic',50),
+('pepper',10)
+
