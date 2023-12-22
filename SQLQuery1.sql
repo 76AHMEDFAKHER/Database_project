@@ -153,3 +153,22 @@ insert into restaurant_schema.ordersBACKUP
 select Customer_id  ,Customer_name ,order_id ,order_price,num_of_order , order_date  ,c_id ,m_name 
 from restaurant_schema.Customers c join restaurant_schema.orders o
 on c.Customer_id =o.c_id 
+
+
+select Customer_id  ,Customer_name ,order_id ,order_price,num_of_order , order_date  ,c_id ,m_name 
+from restaurant_schema.Customers c inner join restaurant_schema.orders o
+on c.Customer_id =o.c_id 
+
+
+select Customer_id  ,Customer_name ,order_id ,order_price,num_of_order , order_date  ,c_id ,m_name 
+from restaurant_schema.Customers c left join restaurant_schema.orders o
+on c.Customer_id =o.c_id 
+
+
+select Customer_id  ,Customer_name ,order_id ,order_price,num_of_order , order_date  ,c_id ,m_name 
+from restaurant_schema.Customers c right join restaurant_schema.orders o
+on c.Customer_id =o.c_id 
+
+select Customer_id  ,Customer_name ,order_id ,order_price,num_of_order , order_date  ,c_id ,m_name 
+from restaurant_schema.Customers c full join restaurant_schema.orders o
+on c.Customer_id =o.c_id 
