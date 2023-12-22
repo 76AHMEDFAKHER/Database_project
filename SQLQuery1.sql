@@ -67,3 +67,26 @@ values
 ('Meat shawarma','Fast food',70),
 ('Burger','Fast food',150),
 ('French fries','Fast food',20)
+
+
+
+create table restaurant_schema.staff(
+staff_id int primary key,
+staff_phone varchar(12),
+staff_name varchar(50) ,
+staff_address varchar(50) 
+
+ );
+
+ insert into restaurant_schema.staff
+values
+(1000, '0118399149','ahmed','10th of Ramadan City'),
+(2000, ' 0125533556','Nour','10th of Ramadan City'),
+(3000, '0118839939','Salma', 'Elshorouk')
+
+ 
+create table restaurant_schema.stock(
+stock_name varchar(20) primary key,
+number_of_stock int,
+
+ );
