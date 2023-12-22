@@ -36,6 +36,13 @@ staff_name varchar(50) ,
 staff_address varchar(50) 
  );
 
+alter table restaurant_schema.staff
+ add staff_foreign varchar(20);
+
+ alter table restaurant_schema.staff
+ add foreign key(staff_foreign)
+ references restaurant_schema.stock(stock_name)
+
 create table restaurant_schema.stock(
 stock_name varchar(20) primary key,
 number_of_stock int,
@@ -170,3 +177,19 @@ select Customer_id  ,Customer_name ,order_id ,order_price,num_of_order , order_d
 from restaurant_schema.Customers c full join restaurant_schema.orders o on c.Customer_id =o.c_id
 full join restaurant_schema.menu m on o.m_name = m.meal_name 
 
+create index order_id_index
+on restaurant_schema.orders(order_id)
+
+create index Customer_id_index
+on restaurant_schema.Customers(Customer_id)
+
+create index meal_name_index
+on restaurant_schema.menu(meal_name)
+
+create index staff_id_index
+on restaurant_schema.staff(staff_id)
+
+create index stock_name_index
+on restaurant_schema.stock(stock_name)
+
+                                 /* finishedddd (^__^) */
