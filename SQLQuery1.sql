@@ -100,3 +100,12 @@ values
 ('garlic',50),
 ('pepper',10)
 
+
+create table restaurant_schema.menuBACKUP(
+meal_name varchar(200)primary key ,
+meal_category varchar(200) ,
+meal_price int 
+ );
+ insert into restaurant_schema.menuBACKUP
+ select *from restaurant_schema.menu
+ where meal_name in (select meal_name from restaurant_schema.menu)
